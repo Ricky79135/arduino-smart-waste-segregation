@@ -73,45 +73,6 @@ The system follows a sensor-based decision-making approach:
 
 ---
 
-🔄 System Architecture
-                    ┌─────────────────┐
-                    │   Waste Input   │
-                    └────────┬────────┘
-                             ↓
-                    ┌─────────────────┐
-                    │    IR Sensor    │
-                    │ Object Detection│
-                    └────────┬────────┘
-                             ↓
-                    ┌─────────────────┐
-                    │   Arduino UNO   │
-                    │  Control Logic  │
-                    └────────┬────────┘
-                             ↓
-                    ┌─────────────────┐
-                    │  Metal Sensor   │
-                    └────────┬────────┘
-                             ↓
-                    ┌─────────────────┐
-                    │Moisture Sensor  │
-                    └────────┬────────┘
-                             ↓
-                     Classification
-                             │
-             ┌───────────────┼───────────────┐
-             ↓               ↓               ↓
-          METAL             WET             DRY
-             │               │               │
-             └───────────────┼───────────────┘
-                             ↓
-                    Motorized Mechanism
-                             ↓
-                    ┌─────────────────┐
-                    │ Waste Collection│
-                    │   Compartments  │
-                    └─────────────────┘
----
-
 ## 🔧 Hardware Components
 
 | Component               | Purpose                             |

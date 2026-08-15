@@ -1,0 +1,61 @@
+⚙️ How the System Works
+
+The system operates through a sequence of detection, classification, and mechanical sorting.
+
+1. Waste Detection
+
+When an object is placed into the input section, the IR sensor detects its presence.
+
+The Arduino continuously monitors the sensor and starts the classification process when an object is detected.
+
+Waste placed
+     ↓
+IR Sensor
+     ↓
+Object detected
+     ↓
+Classification begins
+
+2. Metal Detection
+
+After detecting an object, the system checks the metal detection sensor.
+
+If metallic material is detected, the Arduino classifies the object as Metal Waste.
+
+Metal detected
+      ↓
+METAL
+      ↓
+Metal compartment
+
+3. Moisture Detection
+
+If metal is not detected, the Arduino checks the moisture sensor.
+
+The moisture reading is compared against a predefined threshold.
+
+No metal detected
+       ↓
+Moisture sensor
+       ↓
+ ┌─────┴─────┐
+ ↓           ↓
+Wet         Dry
+ ↓           ↓
+Wet Bin     Dry Bin
+
+4. Mechanical Sorting
+
+Once the category has been determined, the Arduino activates the motorized mechanism.
+
+The stepper motor positions the sorting mechanism, while the servo motor can control the opening, closing, or movement of the mechanical gate depending on the design.
+
+5. Waste Collection
+
+The waste is directed into the appropriate compartment:
+
+Metal → Metal compartment
+Wet → Wet compartment
+Dry → Dry compartment
+
+After sorting, the mechanism returns to its initial position and waits for the next object.

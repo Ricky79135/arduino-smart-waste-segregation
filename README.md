@@ -43,29 +43,6 @@ The system follows a sensor-based decision-making approach:
                         ▼            ▼
                      WET BIN      DRY BIN
 ```
-                 ┌───────────────┐
-                 │  ARDUINO UNO  │
-                 └───────┬───────┘
-                         │
-       ┌─────────────────┼─────────────────┐
-       │                 │                 │
-       ▼                 ▼                 ▼
-   IR SENSOR       METAL SENSOR      MOISTURE SENSOR
-       │                 │                 │
-       └─────────────────┼─────────────────┘
-                         │
-                         ▼
-                   DECISION LOGIC
-                         │
-              ┌──────────┴──────────┐
-              ▼                     ▼
-        SERVO MOTOR          ULN2003 DRIVER
-                                    │
-                                    ▼
-                              STEPPER MOTOR
-                                    │
-                                    ▼
-                            SORTING MECHANISM
 ---
 
 ## 🎯 Objectives
